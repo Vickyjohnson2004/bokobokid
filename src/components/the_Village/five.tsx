@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import img1 from "./../../assets/boki1.jpg";
 import img2 from "./../../assets/boki7.jpg";
-import img3 from "./../../assets/boki.jpg";
+import img3 from "./../../assets/boki10.jpg";
 
 interface CardItem {
   title: string;
