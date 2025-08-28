@@ -44,8 +44,8 @@ export const Navigation = () => {
     // The Village  /the-village    FaPeopleGroup
     // "Story Quest"  /story-quest    GiBrain
     { name: "Home", to: "/", icon: Home },
-
-    { name: "Story Quest", to: "/the-village", icon: GiBrain },
+    // /story-quest
+    { name: "Story Quest", to: "/story-quest", icon: GiBrain },
     {
       name: "Library",
       to: "/library",
@@ -55,16 +55,11 @@ export const Navigation = () => {
         { name: "Read", to: "/library/read", icon: FileText },
       ],
     },
-    { name: "The Village", to: "/story-quest", icon: FaPeopleGroup },
+    { name: "The Village", to: "/the-village", icon: FaPeopleGroup },
     {
       name: "About Us",
       to: "/about",
       icon: Users,
-      dropdown: [
-        { name: "Vision", to: "/about/vision", icon: Home },
-        { name: "Mission", to: "/about/mission", icon: Home },
-        { name: "Team", to: "/about/team", icon: Users },
-      ],
     },
     { name: "Store", to: "/store", icon: ShoppingBag },
     { name: "Blog", to: "/blog", icon: FileText },
@@ -84,12 +79,12 @@ export const Navigation = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2">
             <div className="w-12 h-12 bg-gradient-heritage rounded-lg flex items-center justify-center animate-pulse-glow">
               <img
                 src={logo}
                 alt="Bokobokids Logo"
-                className="w-12 h-12 object-contain rounded-lg"
+                className="w-10 h-10 object-contain rounded-lg"
               />
             </div>
             <div>
@@ -207,7 +202,7 @@ export const Navigation = () => {
                     <div key={item.name} className="space-y-1">
                       <div className="flex items-center text-black space-x-3 font-ubuntu font-medium py-2">
                         <IconComponent className="w-5 h-5" />
-                        <span>{item.name}</span>
+                        <span className="text-black">{item.name}</span>
                       </div>
                       <div className="pl-6 space-y-1">
                         {item.dropdown.map((subItem) => {
